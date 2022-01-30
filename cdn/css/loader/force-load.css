@@ -1,0 +1,35 @@
+a {
+    font-size: 12px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.force-load {
+    padding-top: 100px;
+}
+
+/* Distanta dintre text si buton */
+.buttons-con .action-link-wrap {
+    margin-top: 15px;
+}
+
+/* CSS buton */
+button {
+    background: white;
+    padding: 5px 35px;
+    border-radius: 4px;
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 0px;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background: rgb(43, 43, 43);
+    color: #fff;
+}

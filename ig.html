@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ** Copyright 2021 - LINISTITUL ** -->
+    
+    <!-- This app was entirely created by Sebastian Ghiveci on behalf of LINISTITUL. -->
+    <!-- Any reproduction of the content is strictly forbidden. -->
+    
+    <!-- ** Copyright 2021 - LINISTITUL ** -->
+
+    <!-- CONFIG -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart 301 | For Instagram</title>
+    <meta name="description" content="FREE Deep Linking app for Instagram, YouTube and Twitter. Just paste in the link and Smart301 will take care of the rest." />
+
+    <!-- SEO -->
+    <meta property="og:title" content="Smart 301 | Your Deep Linking Tool" />
+    <meta property="og:description" content="FREE Deep Linking app for Instagram, YouTube and Twitter." />
+    <meta property="og:image" content="https://smart301.linistitul.ro/cdn/img/sfav.png" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" type="image/png" href="cdn/img/fav.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://static.linistitul.ro/cdn/css/fonts.css" />
+    <link rel="stylesheet" href="cdn/css/common/style.css" />
+    <link rel="stylesheet" href="cdn/css/common/generator.css" />
+    <link rel="stylesheet" href="cdn/css/common/button.css" />
+
+    <link rel="stylesheet" href="cdn/css/ig/style.css" />
+    <link rel="stylesheet" href="cdn/css/ig/generator.css" />
+    <link rel="stylesheet" href="cdn/css/ig/button.css" />
+
+    <!-- JS -->
+    <script src="cdn/js/ig/script.js"></script>
+    <script src="cdn/js/defaults.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1J2347WJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KW1J2347WJ');
+    </script>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1><a href="/">Smart 301</a> <a id="credits" href="https://go.linistitul.ro/yt" target="_blank">by LINISTITUL</a></h1>
+      <h2>Your Deep Linking Tool</h2>
+    </div>
+    <div class="generator">
+      <form name="Smart301">
+        <div class="unique">
+          <input type="text" name="App" id="usedAppVer" hidden />
+          <input type="text" name="IPv4" id="userIPv4" hidden />
+          <input type="text" name="IPv6" id="userIPv6" hidden />
+        </div>
+        <div class="raw">
+          <p id="go">Enter Your Instagram Username</p>
+          <input id="rawlink" type="text" name="Username" autocapitalize="off" maxlength="30" onkeyup="checkForEnterKey(this.value)" />
+        </div>
+        <div class="check">
+          <input readonly id="validation" type="text" name="Smart301_Output" />
+        </div>
+        <div class="button">
+          <button onclick="generateLink()" id="generate" type="submit" name="generator">CREATE SMART LINK</button>
+        </div>
+        <div class="final">
+          <p id="copy">LINK COPYED!</p>
+        </div>
+      </form>
+      <script src="cdn/js/ig/database-processing.js"></script>
+    </div>
+    <div class="more">
+      <div class="smallTitle">
+        <p><a>Smart 301</a> also for</p>
+        <div class="icons">
+          <a href="/" target="_self">
+            <img src="https://gocdn.frontfacer.com/img/icons/yt-dev1.png" alt="Smart 301 for YouTube" id="yt">
+          </a>
+          <!-- <a id="space"></a> -->
+          <a href="tw" target="_self">
+            <img src="https://gocdn.frontfacer.com/img/icons/tw-dev1.png" alt="Smart 301 for Twitter">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="support">
+      <p>Support This Project</p>
+      <div class="icons">
+        <a href="https://www.paypal.com/donate?hosted_button_id=WEH9N67HPTCJ4&source=url" target="_blank">
+          <img src="https://gocdn.frontfacer.com/img/icons/pp.png" alt="PayPal" id="pp">
+        </a>
+        <a id="space"></a>
+        <a href="https://www.patreon.com/linistitul" target="_blank">
+          <img src="https://gocdn.frontfacer.com/img/icons/pt.png" alt="Patreon" id="p">
+        </a>
+      </div>
+    </div>
+    <div class="info">
+      <p>
+        <a href="info/contact">Contact</a>
+         〣 
+        <a href="info/about">About the App</a>
+         〣 
+        <a href="info/terms">Terms</a>
+      </p>
+    </div>
+    <div class="appVersion">
+      <a href="info/release" id="ver">Version Loading...</a>
+    </div>
+  </body>
+</html>

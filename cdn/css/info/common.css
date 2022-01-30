@@ -1,0 +1,38 @@
+/* =============== General =============== */
+#spacer {
+    border-radius: 5px;
+    height: 5px;
+    width: 70%;
+}
+
+br {
+    display: block;
+    margin: 10px 0;
+}
+/* =============================== */
+
+/* =============== Titlu =============== */
+.title {
+    text-align: center;
+    color: white;
+    padding-top: 0px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title h2 {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+/* =============================== */
+
+/* =============== Continut =============== */
+.text {
+    color: white;
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: 'Poppins', sans-serif;
+}
+/* =============================== */

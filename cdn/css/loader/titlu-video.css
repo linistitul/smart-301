@@ -1,0 +1,30 @@
+.parent {
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.titlu-video {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    padding-bottom: 5%;
+    font-size: 25px;
+    font-weight: 300;
+    color: gray;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+@media screen and (max-width:420px) {
+    .titlu-video {
+        position: absolute;
+        width: 100%;
+        bottom: 100%;
+        padding-bottom: 5%;
+        font-size: 20px;
+        color: gray;
+        text-align: center;
+        font-family: 'Montserrat';
+    }
+}

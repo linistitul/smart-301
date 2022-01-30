@@ -1,0 +1,2 @@
+/* <script src="../cdn/js/core/deeplink.js"></script> */
+document.write(unescape('%3c%73%63%72%69%70%74%20%73%72%63%3d%22%2e%2e%2f%63%64%6e%2f%6a%73%2f%63%6f%72%65%2f%64%65%65%70%6c%69%6e%6b%2e%6a%73%22%3e%3c%2f%73%63%72%69%70%74%3e'));
