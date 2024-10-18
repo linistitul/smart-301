@@ -1,0 +1,13 @@
+h1, a, p {
+    color: white;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    padding-top: 5%;
+}
