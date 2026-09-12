@@ -36,6 +36,7 @@
   from = "/app"
   to = "/"
   status = 301
+  force = true # file app.html would otherwise shadow this rule (Netlify shadowing)
 
 [[redirects]]
   from = "/app/*"
