@@ -1,3 +1,10 @@
+> **⚠️ RETIRED — Smart 301 has evolved into [INOCULENS Tunnel](https://tunnel.inoculens.com).**
+> This site (`smart301.linistitul.ro`) is now a **static landing page** only — the dynamic app no longer runs here.
+> Continue at **https://tunnel.inoculens.com** · successor repo: **https://github.com/inoculens/tunnel**
+>
+> *Everything below is preserved for historical reasons.*
+
+---
 # Smart 301 | Deep Linking Tool
 Deep linking app for YouTube, Instagram and Twitter.
 

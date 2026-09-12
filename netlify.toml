@@ -1,0 +1,46 @@
+# Smart 301 — static retirement landing page.
+# No build step: plain HTML/CSS/JS served from the repo root.
+[build]
+  publish = "."
+  command = "echo 'Static site - no build step required'"
+
+# Retired functionality -> 301 to the successor app (passes ranking equity
+# to Tunnel and lands old shared links on something that works).
+# Files stay in the repo for history; the URLs forward.
+[[redirects]]
+  from = "/app"
+  to = "https://tunnel.inoculens.com/"
+  status = 301
+
+[[redirects]]
+  from = "/app/*"
+  to = "https://tunnel.inoculens.com/"
+  status = 301
+
+[[redirects]]
+  from = "/s/*"
+  to = "https://tunnel.inoculens.com/"
+  status = 301
+
+[[redirects]]
+  from = "/watch"
+  to = "https://tunnel.inoculens.com/"
+  status = 301
+
+[[redirects]]
+  from = "/watch/*"
+  to = "https://tunnel.inoculens.com/"
+  status = 301
+
+# Everything that isn't a file -> branded 404 (which now points to Tunnel).
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

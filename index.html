@@ -1,55 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- ** Copyright 2021 - LINISTITUL ** -->
-    
-    <!-- This app was entirely created by Sebastian Ghiveci on behalf of LINISTITUL. -->
-    <!-- Any reproduction of the content is strictly forbidden. -->
-    
-    <!-- ** Copyright 2021 - LINISTITUL ** -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart 301 Retired → INOCULENS Tunnel (tunnel.inoculens.com)</title>
+  <meta name="description" content="Smart 301 is retired and no longer active. All deep-linking features have moved to INOCULENS Tunnel — free URL shortener & deep link generator at tunnel.inoculens.com." />
+  <link rel="canonical" href="https://smart301.linistitul.ro/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0f0f0f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Smart 301 → INOCULENS Tunnel" />
+  <meta property="og:title" content="Smart 301 Is Retired — Moved to INOCULENS Tunnel" />
+  <meta property="og:description" content="Smart 301 is no longer active. All features have moved to INOCULENS Tunnel: tunnel.inoculens.com." />
+  <meta property="og:url" content="https://smart301.linistitul.ro/" />
+  <meta property="og:image" content="https://smart301.linistitul.ro/cdn/img/tunnel-logo.png" />
+  <meta property="og:image:alt" content="INOCULENS Tunnel logo — successor of Smart 301" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Smart 301 Is Retired — Moved to INOCULENS Tunnel" />
+  <meta name="twitter:description" content="Smart 301 is no longer active. Continue at tunnel.inoculens.com." />
+  <meta name="twitter:image" content="https://smart301.linistitul.ro/cdn/img/tunnel-logo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tunnel.inoculens.com/#org",
+        "name": "INOCULENS",
+        "url": "https://tunnel.inoculens.com/"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://smart301.linistitul.ro/#app",
+        "name": "Smart 301",
+        "url": "https://smart301.linistitul.ro/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "creator": { "@type": "Organization", "name": "LINISTITUL", "url": "https://linistitul.ro" },
+        "successor": { "@id": "https://tunnel.inoculens.com/#app" },
+        "creativeWorkStatus": "Retired"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://tunnel.inoculens.com/#app",
+        "name": "INOCULENS Tunnel",
+        "url": "https://tunnel.inoculens.com/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "publisher": { "@id": "https://tunnel.inoculens.com/#org" },
+        "predecessor": { "@id": "https://smart301.linistitul.ro/#app" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://smart301.linistitul.ro/#page",
+        "url": "https://smart301.linistitul.ro/",
+        "name": "Smart 301 Retired — Moved to INOCULENS Tunnel",
+        "description": "Smart 301 is retired and no longer active. All deep-linking features have moved to INOCULENS Tunnel at tunnel.inoculens.com.",
+        "inLanguage": "en",
+        "datePublished": "2021-05-24",
+        "dateModified": "2026-09-12",
+        "about": { "@id": "https://smart301.linistitul.ro/#app" },
+        "mentions": { "@id": "https://tunnel.inoculens.com/#app" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://smart301.linistitul.ro/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Smart 301 still active?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Smart 301 is retired and no longer active. All of its features have moved to INOCULENS Tunnel at https://tunnel.inoculens.com/." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where did Smart 301's features go?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Deep links for YouTube, Instagram and more, URL shortening, custom domains and click analytics all live on in INOCULENS Tunnel at https://tunnel.inoculens.com/." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="shortcut icon" type="image/png" href="cdn/img/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;600;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;600;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@400;600;800&display=swap" /></noscript>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100vh; }
+    body {
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; min-height: 100dvh; overflow-x: hidden; background: #0f0f0f;
+    }
+    .bg { position: fixed; inset: 0; transition: opacity 1.4s ease; pointer-events: none; }
+    .bg-smart {
+      background:
+        linear-gradient(rgba(0,40,80,.4), rgba(0,20,50,.5)),
+        url('https://static.linistitul.ro/database/images/covers/bk3-blur.jpg') center / cover no-repeat,
+        linear-gradient(135deg, #0a3d62, #0091ff);
+    }
+    .bg-tunnel {
+      opacity: 0;
+      background:
+        radial-gradient(900px 420px at 50% -140px, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(700px 380px at 85% 10%, rgba(62,166,255,.07), transparent 60%),
+        #0f0f0f;
+    }
+    body[data-phase="tunnel"] .bg-smart { opacity: 0; }
+    body[data-phase="tunnel"] .bg-tunnel { opacity: 1; }
 
-    <!-- CONFIG -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- SEO -->
-    <title>Smart 301 | Deep Linking Tool</title>
-    <meta property="og:title" content="Smart 301 | Your Deep Linking Tool" />
-    <meta name="description" content="FREE Deep Linking app for YouTube, Instagram and Twitter. Just paste in the link and Smart301 will take care of the rest." />
-    <meta property="og:description" content="FREE Deep Linking app for YouTube, Instagram and Twitter." />
-    <meta property="og:image" content="https://smart301.linistitul.ro/cdn/img/sfav.png" />
-    <meta property="og:url" content="https://smart301.linistitul.ro" />
-    <meta name="robots" content="index, follow" />
+    /* ---- Iris: blur closes in uniformly from the edges toward the logo,
+       fires the morph at the center, then opens back out exposing Tunnel. ---- */
+    .iris {
+      position: fixed; inset: 0; z-index: 5; pointer-events: none;
+      --hole: 150vmax;
+      --hx: 50vw; --hy: 50vh;
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(16px) saturate(1.1);
+      -webkit-backdrop-filter: blur(16px) saturate(1.1);
+      -webkit-mask-image: radial-gradient(circle var(--hole) at var(--hx) var(--hy), transparent 30%, #000 90%);
+      mask-image: radial-gradient(circle var(--hole) at var(--hx) var(--hy), transparent 30%, #000 90%);
+    }
 
-    <!-- FAV ICON -->
-    <link rel="shortcut icon" type="image/png" href="cdn/img/fav.png" />
+    main { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 48px 24px 64px; width: 100%; }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://static.linistitul.ro/cdn/css/fonts.css" />
-    <link rel="stylesheet" href="cdn/css/common/style.css" />
-    <link rel="stylesheet" href="cdn/css/index.css" />
+    /* ---- The mark: Smart-301 badge -> real Tunnel logo (Google-G style morph) ---- */
+    .mark { width: 148px; height: 148px; position: relative; flex-shrink: 0; }
+    .badge {
+      position: absolute; inset: 0; overflow: hidden;
+      background: #0091ffb4; border: 1px solid rgba(0,195,255,.6);
+      border-radius: 28px; box-shadow: 0 12px 40px rgba(0,145,255,.35);
+      transition: border-radius 1.2s cubic-bezier(.65,0,.35,1), background 1.2s ease,
+                  border-color 1.2s ease, box-shadow 1.2s ease, transform 1.2s cubic-bezier(.65,0,.35,1),
+                  opacity .5s ease .35s;
+    }
+    .badge img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .4s ease, transform .55s ease, filter .55s ease; }
+    .logo {
+      position: absolute; inset: -14px; opacity: 0; transform: scale(.55) rotate(-90deg); filter: blur(20px);
+      transition: opacity .7s ease .25s, transform 1.2s cubic-bezier(.65,0,.35,1) .1s, filter 1.2s ease .1s;
+    }
+    .logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    body[data-phase="tunnel"] .badge {
+      border-radius: 50%; background: rgba(33,33,36,.6); border-color: transparent;
+      box-shadow: none; transform: rotate(180deg) scale(.9); opacity: 0;
+    }
+    body[data-phase="tunnel"] .badge img { opacity: 0; transform: scale(.4) rotate(-30deg); filter: blur(10px); }
+    body[data-phase="tunnel"] .logo { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
+    /* Glow lives on the img so its drop-shadow animation never fights the .logo blur transition. */
+    body[data-phase="tunnel"] .logo img { animation: breathe 4.5s ease-in-out 1.8s infinite; }
+    @keyframes breathe { 0%,100% { filter: drop-shadow(0 0 0 rgba(62,166,255,0)); } 50% { filter: drop-shadow(0 0 22px rgba(62,166,255,.35)); } }
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW1J2347WJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    /* ---- Wordmark swap ---- */
+    .words { margin-top: 28px; position: relative; width: min(480px, 90vw); text-align: center; }
+    .words h1 {
+      margin: 0; display: flex; flex-direction: column; gap: 10px; align-items: center;
+      transition: opacity .7s ease, transform .7s ease, filter .7s ease;
+    }
+    .w-smart { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 600; }
+    .w-smart small { font-size: .75rem; font-weight: 400; color: rgba(255,255,255,.75); letter-spacing: .16em; text-transform: uppercase; }
+    .w-tunnel {
+      position: absolute; inset: 0; font-family: 'DM Sans', sans-serif; font-size: 2rem; font-weight: 700; letter-spacing: -.02em;
+      background: linear-gradient(to bottom, #fff 30%, #b3b8c2 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      opacity: 0; transform: translateY(14px); filter: blur(8px); pointer-events: none;
+    }
+    body[data-phase="tunnel"] .w-smart { opacity: 0; transform: translateY(-12px); filter: blur(8px); }
+    body[data-phase="tunnel"] .w-tunnel { opacity: 1; transform: none; filter: none; }
 
-      gtag('config', 'G-KW1J2347WJ');
-    </script>
-  </head>
+    /* ---- Tunnel-style info (fades in after the morph) ---- */
+    .info {
+      margin-top: 6px; display: flex; flex-direction: column; align-items: center; text-align: center;
+      font-family: 'DM Sans', sans-serif; max-width: 520px;
+      opacity: 0; transform: translateY(12px); filter: blur(6px); pointer-events: none;
+      transition: opacity .8s ease .55s, transform .8s ease .55s, filter .8s ease .55s;
+    }
+    body[data-phase="tunnel"] .info { opacity: 1; transform: none; filter: none; pointer-events: auto; }
+    .info p { margin: 6px 0 0; color: #aaa; font-size: .95rem; }
+    .info p b { color: #e6e6e6; font-weight: 500; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+    .pills span {
+      font-size: .78rem; color: #d7d7d7; border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.05); padding: 6px 13px; border-radius: 999px; white-space: nowrap;
+    }
+    /* Flat fill, hard edge: base and fill meet at one crisp boundary with no
+       ramp in between — there is no fade zone left to read as shades. */
+    .cta {
+      margin-top: 22px; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: .95rem; text-decoration: none; padding: 0 20px; height: 50px;
+      width: 320px; max-width: 88vw;
+      border-radius: 999px; transition: transform .1s ease;
+      position: relative; overflow: hidden; isolation: isolate;
+      background-color: #26262b;
+      /* 13-stop perceptual ramp: equal-lightness intermediates (not one linear
+         blend), so the eye finds no bands or flat middle shade. */
+      background-image: linear-gradient(90deg, #26262b 0, #45454c calc(var(--pfill, 0%) - 12%), #515158 calc(var(--pfill, 0%) - 11%), #5e5e64 calc(var(--pfill, 0%) - 10%), #6a6b71 calc(var(--pfill, 0%) - 9%), #77787e calc(var(--pfill, 0%) - 8%), #85858b calc(var(--pfill, 0%) - 7%), #929399 calc(var(--pfill, 0%) - 6%), #a0a1a6 calc(var(--pfill, 0%) - 5%), #aeafb4 calc(var(--pfill, 0%) - 4%), #bcbec2 calc(var(--pfill, 0%) - 3%), #cbccd0 calc(var(--pfill, 0%) - 2%), #d9dbde calc(var(--pfill, 0%) - 1%), #e8eaed var(--pfill, 0%), #e8eaed 100%);
+      background-repeat: no-repeat;
+    }
+    /* Film-grain dither over the button face: breaks up gradient banding so
+       the soft edge reads as one continuous melt instead of discrete shades.
+       Under the label (z-index), over the backgrounds. */
+    .cta::after {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: .07; pointer-events: none;
+    }
+    /* Difference blend keeps the label readable on BOTH the light base and
+       the dark fill at every point of the sweep — no timed color flip. */
+    .cta-label, .cta-arrow { position: relative; z-index: 1; color: #fff; mix-blend-mode: difference; white-space: nowrap; }
+    /* Zero footprint until hover: text sits perfectly centered, no gap kept.
+       On hover the arrow slides in from the right, nudging text left, and
+       the fixed button width keeps everything centered without resizing. */
+    .cta-arrow {
+      display: inline-block; max-width: 0; opacity: 0; overflow: hidden;
+      margin-left: 0; transform: translateX(8px);
+      transition: max-width .35s ease, margin-left .35s ease, opacity .25s ease, transform .3s ease;
+    }
+    .cta:hover .cta-arrow, .cta:focus-visible .cta-arrow { max-width: 2em; margin-left: 10px; opacity: 1; transform: none; }
+    .cta:active { transform: scale(.98); }
 
-  <body>
-    <div class="title">
-      <h1><a href="/">Smart 301</a> <a id="credits" href="https://go.linistitul.ro/yt" target="_blank">by LINISTITUL</a></h1>
-      <h2>Your Deep Linking Tool</h2>
+    footer { position: fixed; bottom: 14px; width: 100%; text-align: center; z-index: 6; color: #717171; font-size: .72rem; font-family: 'DM Sans', sans-serif; }
+    footer a { color: #8ab4ff; text-decoration: none; }
+    footer .hist { margin: 6px 0 0; }
+    footer .faq { display: inline-block; margin: 0 8px; text-align: left; vertical-align: top; }
+    footer .faq summary { cursor: pointer; list-style: none; }
+    footer .faq summary::-webkit-details-marker { display: none; }
+    footer .faq summary:hover { color: #aaa; }
+    footer .faq p { margin: 4px 0 0; max-width: 260px; }
+    @media (prefers-reduced-motion: reduce) {
+      .bg, .badge, .badge span, .logo, .words h1, .info { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body data-phase="smart">
+  <div class="bg bg-smart" aria-hidden="true"></div>
+  <div class="bg bg-tunnel" aria-hidden="true"></div>
+  <div class="iris" id="iris" aria-hidden="true"></div>
+
+  <main>
+    <div class="mark" aria-hidden="true">
+      <div class="badge"><img src="cdn/img/fav.png" alt="Smart 301 logo" width="148" height="148" /></div>
+      <div class="logo"><img src="cdn/img/tunnel-logo.png" alt="" width="176" height="176" /></div>
     </div>
-    <h1>CHOOSE APP FOR DEEP-LINKING</h1>
-    <p id="apps">
-      <a href="/app?=yt">Youtube</a>
-      <a href="/app?=ig">Instagram</a>
-      <a href="/app?=tw">Twitter</a>
-    </p>
-  </body>
+
+    <div class="words" aria-live="polite">
+      <h1 class="w-smart">Smart 301<small>Your deep linking tool</small></h1>
+      <h1 class="w-tunnel">INOCULENS Tunnel</h1>
+    </div>
+
+    <div class="info">
+      <p>Smart 301 has retired — the app has <b>evolved and moved</b>.</p>
+      <div class="pills">
+        <span>Free deep links</span><span>Custom domains</span><span>Real-time analytics</span>
+      </div>
+      <a class="cta" id="cta" href="https://tunnel.inoculens.com"><span class="cta-label">Open tunnel.inoculens.com</span><span class="cta-arrow">→</span></a>
+    </div>
+
+  </main>
+
+  <footer>
+    <details class="faq">
+      <summary>Is Smart 301 still active?</summary>
+      <p>No. Smart 301 is retired — all features moved to <a href="https://tunnel.inoculens.com">INOCULENS Tunnel</a>.</p>
+    </details>
+    <details class="faq">
+      <summary>Where did Smart 301's features go?</summary>
+      <p>Deep links, URL shortening, custom domains and analytics all live on at <a href="https://tunnel.inoculens.com">tunnel.inoculens.com</a>.</p>
+    </details>
+    <p class="hist">Smart 301 retired · history: <a href="info/release.html">release notes</a> · <a href="https://github.com/linistitul/smart-301">github</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var iris = document.getElementById('iris');
+      var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced || !window.requestAnimationFrame || !iris) {
+        document.body.dataset.phase = 'tunnel';
+        if (iris) iris.remove();
+        return;
+      }
+      // Center the iris hole on the real logo position, not the viewport middle.
+      var mark = document.querySelector('.mark');
+      var holeMin = 8; // vmax; tightened below to hug the logo
+      if (mark) {
+        var rect = mark.getBoundingClientRect();
+        iris.style.setProperty('--hx', ((rect.left + rect.right) / 2 / window.innerWidth * 100).toFixed(2) + 'vw');
+        iris.style.setProperty('--hy', ((rect.top + rect.bottom) / 2 / window.innerHeight * 100).toFixed(2) + 'vh');
+        holeMin = Math.min(14, Math.max(3, (rect.width / 2 * 1.15) / Math.max(window.innerWidth, window.innerHeight) * 100));
+      }
+      var CLOSE = 1500, OPEN = 1200; // ms
+      var AUTO_SECS = 5;
+      var TUNNEL_URL = 'https://tunnel.inoculens.com';
+      var start = 0, morphed = false;
+      var ctaBtn = document.getElementById('cta');
+      var autoRaf = 0, autoStart = 0, autoBegun = false;
+      function lerp(a, b, t) { return a + (b - a) * t; }
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+      function easeInOut(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+      function setHole(r) {
+        iris.style.setProperty('--hole', r.toFixed(2) + 'vmax');
+      }
+      function startAuto() {
+        if (autoBegun) return;
+        autoBegun = true;
+        autoStart = 0;
+        autoRaf = requestAnimationFrame(autoFrame);
+      }
+      function autoFrame(now) {
+        if (!autoStart) autoStart = now;
+        var p = (now - autoStart) / (AUTO_SECS * 1000);
+        // Sweep runs past 100% so the soft leading edge slides fully off the
+        // button: it visibly completes, holds solid, and only then redirects.
+        if (p >= 1.12) {
+          setTimeout(function () { window.location.href = TUNNEL_URL; }, 350);
+          return;
+        }
+        if (ctaBtn) ctaBtn.style.setProperty('--pfill', (p * 100).toFixed(1) + '%');
+        autoRaf = requestAnimationFrame(autoFrame);
+      }
+      function frame(now) {
+        if (!start) start = now;
+        var t = now - start;
+        // Fire the spin just before the iris lands, so the two blurs merge
+        // into one continuous handoff instead of stopping at the logo.
+        if (!morphed && t >= CLOSE * 0.85) { morphed = true; document.body.dataset.phase = 'tunnel'; startAuto(); }
+        if (t < CLOSE) {
+          // Outside -> inside: fast start, decelerating as the blur approaches
+          // the logo (ease-out, like Premiere's Continuous Bezier).
+          setHole(lerp(150, holeMin, easeOut(t / CLOSE)));
+        } else {
+          var e = t - CLOSE;
+          if (e < OPEN) {
+            // Inside -> outside: hole reopens gently (ease-in-out, no pop),
+            // exposing Tunnel underneath.
+            setHole(lerp(holeMin, 150, easeInOut(e / OPEN)));
+          } else {
+            iris.remove();
+            return;
+          }
+        }
+      requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
 </html>

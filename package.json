@@ -1,0 +1,22 @@
+{
+  "name": "smart-301-retired",
+  "private": true,
+  "version": "2.3.2",
+  "description": "Retired static landing page: Smart 301 has evolved into INOCULENS Tunnel (tunnel.inoculens.com). No build required.",
+  "scripts": {
+    "build": "echo 'Static site - no build step required'"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linistitul/smart-301.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/linistitul/smart-301/issues"
+  },
+  "homepage": "https://github.com/linistitul/smart-301#readme"
+}
