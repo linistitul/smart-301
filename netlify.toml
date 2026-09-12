@@ -4,9 +4,31 @@
   publish = "."
   command = "echo 'Static site - no build step required'"
 
-# Retired functionality -> 301 to the successor app (passes ranking equity
-# to Tunnel and lands old shared links on something that works).
-# Files stay in the repo for history; the URLs forward.
+# Old smart links keep working forever: the target is embedded in the path,
+# so plain pattern 301s resolve every link with no database and no code.
+# Netlify merges query strings through 301s, so ?t= / ?si= survive on watch.
+[[redirects]]
+  from = "/watch/:id"
+  to = "https://www.youtube.com/watch?v=:id"
+  status = 301
+
+[[redirects]]
+  from = "/s/ig/:user"
+  to = "https://www.instagram.com/:user"
+  status = 301
+
+[[redirects]]
+  from = "/s/tw/:user"
+  to = "https://x.com/:user"
+  status = 301
+
+[[redirects]]
+  from = "/s/fb/:id"
+  to = "https://www.facebook.com/:id"
+  status = 301
+
+# Creation UI closed: /app paths forward to the successor.
+# /app.html itself stays servable as history (see noindex headers below).
 [[redirects]]
   from = "/app"
   to = "https://tunnel.inoculens.com/"
@@ -17,26 +39,39 @@
   to = "https://tunnel.inoculens.com/"
   status = 301
 
-[[redirects]]
-  from = "/s/*"
-  to = "https://tunnel.inoculens.com/"
-  status = 301
-
-[[redirects]]
-  from = "/watch"
-  to = "https://tunnel.inoculens.com/"
-  status = 301
-
-[[redirects]]
-  from = "/watch/*"
-  to = "https://tunnel.inoculens.com/"
-  status = 301
-
 # Everything that isn't a file -> branded 404 (which now points to Tunnel).
 [[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
+
+# Legacy functional files: servable for history, invisible to search.
+# (Default non-forced redirects above already yield to these exact files;
+#  the headers below keep them out of indexes. Nothing links to them.)
+[[headers]]
+  for = "/app.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/watch/app.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/s/ig/app.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/s/tw/app.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/s/fb/app.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/*"
