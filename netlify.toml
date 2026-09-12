@@ -27,16 +27,19 @@
   to = "https://www.facebook.com/:id"
   status = 301
 
-# Creation UI closed: /app paths forward to the successor.
+# Creation UI closed: /app URLs 301 to the site root (not straight to Tunnel),
+# so visitors get the retirement animation + auto-redirect journey, and
+# search engines consolidate /app signals onto / — whose page, canonical,
+# JSON-LD and FAQ all declare the move to INOCULENS Tunnel.
 # /app.html itself stays servable as history (see noindex headers below).
 [[redirects]]
   from = "/app"
-  to = "https://tunnel.inoculens.com/"
+  to = "/"
   status = 301
 
 [[redirects]]
   from = "/app/*"
-  to = "https://tunnel.inoculens.com/"
+  to = "/"
   status = 301
 
 # Everything that isn't a file -> branded 404 (which now points to Tunnel).
